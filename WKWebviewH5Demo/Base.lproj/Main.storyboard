@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MHh-07-k6z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="u5V-Ae-jHl">
+            <objects>
+                <navigationController id="MHh-07-k6z" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Ki-7H-iVw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ONY-Xs-FDA" kind="relationship" relationship="rootViewController" id="RIm-Sl-S4f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z4q-l7-Jfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-793" y="128"/>
+        </scene>
+        <!--Jump View Controller-->
+        <scene sceneID="how-l0-aXN">
+            <objects>
+                <viewController id="ONY-Xs-FDA" customClass="JumpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m6k-bM-As1"/>
+                        <viewControllerLayoutGuide type="bottom" id="jre-bc-XaS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="am3-dJ-tM7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="501" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uco-96-6WJ">
+                                <rect key="frame" x="116.5" y="314" width="142" height="39"/>
+                                <color key="backgroundColor" red="1" green="0.11318603080311407" blue="0.099105748442185337" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="Pg7-MU-qt5"/>
+                                    <constraint firstAttribute="height" constant="39" id="xTa-YM-3TY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="注入图片缩小JS代码"/>
+                                <connections>
+                                    <action selector="jumpToVC:" destination="ONY-Xs-FDA" eventType="touchUpInside" id="VLz-0i-flX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="500" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfY-ed-Ukf">
+                                <rect key="frame" x="116.5" y="212" width="142" height="39"/>
+                                <color key="backgroundColor" red="1" green="0.1131860308" blue="0.099105748440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="7uo-rg-S37"/>
+                                    <constraint firstAttribute="height" constant="39" id="S4I-ZI-x8t"/>
+                                </constraints>
+                                <state key="normal" title="点击进入test.html"/>
+                                <connections>
+                                    <action selector="jumpToVC:" destination="ONY-Xs-FDA" eventType="touchUpInside" id="p1y-wu-hTn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="502" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zN-Dc-U9n">
+                                <rect key="frame" x="116" y="411" width="142" height="39"/>
+                                <color key="backgroundColor" red="1" green="0.1131860308" blue="0.099105748440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="MWi-uy-uPH"/>
+                                    <constraint firstAttribute="width" constant="142" id="vIs-Gh-pG7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="不注入图片缩小JS代码"/>
+                                <connections>
+                                    <action selector="jumpToVC:" destination="ONY-Xs-FDA" eventType="touchUpInside" id="IE3-W7-Zal"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0zN-Dc-U9n" firstAttribute="top" secondItem="Uco-96-6WJ" secondAttribute="bottom" constant="58" id="5P6-b2-yLP"/>
+                            <constraint firstItem="Uco-96-6WJ" firstAttribute="centerX" secondItem="am3-dJ-tM7" secondAttribute="centerX" id="E6A-G2-Nnl"/>
+                            <constraint firstItem="Uco-96-6WJ" firstAttribute="centerX" secondItem="am3-dJ-tM7" secondAttribute="centerX" id="Rm6-Ap-LX2"/>
+                            <constraint firstItem="QfY-ed-Ukf" firstAttribute="centerX" secondItem="am3-dJ-tM7" secondAttribute="centerX" id="VBU-Y8-cQg"/>
+                            <constraint firstItem="Uco-96-6WJ" firstAttribute="centerY" secondItem="am3-dJ-tM7" secondAttribute="centerY" id="Vd0-zn-fXL"/>
+                            <constraint firstItem="Uco-96-6WJ" firstAttribute="top" secondItem="QfY-ed-Ukf" secondAttribute="bottom" constant="63" id="cEI-bm-fPw"/>
+                            <constraint firstItem="0zN-Dc-U9n" firstAttribute="centerX" secondItem="am3-dJ-tM7" secondAttribute="centerX" id="qAh-d9-VoT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UJd-3A-gFV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Qa-PT-J26" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224.80000000000001" y="119.1904047976012"/>
+        </scene>
+    </scenes>
+</document>
